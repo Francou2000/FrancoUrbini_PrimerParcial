@@ -43,5 +43,9 @@ public class SelectionManager : MonoBehaviour
                 interactionInfoUI.SetActive(false);
             }
         }
+        else
+        {
+            interactionInfoUI.SetActive(false);
+        }
     }
 }

@@ -268,6 +268,7 @@ GameObject:
   - component: {fileID: 5630108233184890487}
   - component: {fileID: 7686621819230965396}
   - component: {fileID: 7923271801087067862}
+  - component: {fileID: -7899924369936431535}
   m_Layer: 0
   m_Name: SlimePolyart 1
   m_TagString: Enemy
@@ -355,6 +356,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.4497814
   m_Center: {x: -0.016358405, y: 0.4304375, z: 0}
+--- !u!54 &-7899924369936431535
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819766713477160542}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
 --- !u!1 &5112644000486557543
 GameObject:
   m_ObjectHideFlags: 0
