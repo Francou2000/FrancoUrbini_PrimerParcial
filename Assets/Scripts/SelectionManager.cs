@@ -20,14 +20,23 @@ public class SelectionManager : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit, 10))
         {
             var selectionTransform = hit.transform;
 
             if (selectionTransform.GetComponent<InteractableObject>())
             {
-                interactionText.text = selectionTransform.GetComponent<InteractableObject>().GetItemName();
-                interactionInfoUI.SetActive(true);
+                if (selectionTransform.tag == "Enemy")
+                {
+                    interactionText.text = selectionTransform.GetComponent<InteractableObject>().GetItemName();
+                    interactionText.color = Color.red;
+                    interactionInfoUI.SetActive(true);
+                }
+                else
+                {
+                    interactionText.text = selectionTransform.GetComponent<InteractableObject>().GetItemName();
+                    interactionInfoUI.SetActive(true);
+                }
             }
             else
             {

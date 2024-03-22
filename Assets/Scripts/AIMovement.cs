@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class AI_Movement : MonoBehaviour
+public class AIMovement : MonoBehaviour
 {
-
     Animator animator;
 
-    public float moveSpeed = 0.2f;
+    public float moveSpeed = 1f;
 
     Vector3 stopPosition;
 
@@ -27,8 +26,8 @@ public class AI_Movement : MonoBehaviour
         animator = GetComponent<Animator>();
 
         //So that all the prefabs don't move/stop at the same time
-        walkTime = Random.Range(3, 6);
-        waitTime = Random.Range(5, 7);
+        walkTime = Random.Range(7, 10);
+        waitTime = Random.Range(3, 5);
 
 
         waitCounter = waitTime;
@@ -42,8 +41,7 @@ public class AI_Movement : MonoBehaviour
     {
         if (isWalking)
         {
-
-            animator.SetBool("isRunning", true);
+            animator.SetBool("isWalking", true);
 
             walkCounter -= Time.deltaTime;
 
@@ -73,16 +71,13 @@ public class AI_Movement : MonoBehaviour
                 isWalking = false;
                 //stop movement
                 transform.position = stopPosition;
-                animator.SetBool("isRunning", false);
+                animator.SetBool("isWalking", false);
                 //reset the waitCounter
                 waitCounter = waitTime;
             }
-
-
         }
         else
         {
-
             waitCounter -= Time.deltaTime;
 
             if (waitCounter <= 0)
