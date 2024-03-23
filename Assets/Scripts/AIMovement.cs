@@ -20,6 +20,12 @@ public class AIMovement : MonoBehaviour
 
     public bool isWalking;
 
+    public Transform playerCheck;
+    public float playerDistance = 3f;
+    public LayerMask playerMask;
+
+    public bool isRunning;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,9 +45,27 @@ public class AIMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Walk();
+        DetectPlayer();
+    }
+
+    public void DetectPlayer()
+    {
+        isRunning = Physics.CheckSphere(playerCheck.position, playerDistance, playerMask);
+
+        if (isRunning )
+        {
+            animator.SetBool("isRunning", true);
+            animator.SetBool("isWalking", false);
+        }
+    }
+
+    public void Walk() 
+    {
         if (isWalking)
         {
             animator.SetBool("isWalking", true);
+            animator.SetBool("isRunning", false);
 
             walkCounter -= Time.deltaTime;
 
@@ -87,12 +111,17 @@ public class AIMovement : MonoBehaviour
         }
     }
 
-
     public void ChooseDirection()
     {
         WalkDirection = Random.Range(0, 4);
 
         isWalking = true;
         walkCounter = walkTime;
+    }
+
+    public void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, playerDistance);
     }
 }

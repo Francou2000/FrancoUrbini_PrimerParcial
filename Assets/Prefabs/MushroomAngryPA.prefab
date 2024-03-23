@@ -484,6 +484,37 @@ Transform:
   m_Father: {fileID: 5201070008413211159}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4708319196045347015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9129295518884438931}
+  m_Layer: 0
+  m_Name: PlayerCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9129295518884438931
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4708319196045347015}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.01, y: 0.024, z: 0.025}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5164996500316254572}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5541134392703593430
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,9 +528,10 @@ GameObject:
   - component: {fileID: 8505774680700118318}
   - component: {fileID: 8505774680700118319}
   - component: {fileID: 6538437737527366279}
+  - component: {fileID: -624623411033093949}
   m_Layer: 0
   m_Name: MushroomAngryPA
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -518,6 +550,7 @@ Transform:
   m_Children:
   - {fileID: 7197774591228392790}
   - {fileID: 1414761474910292732}
+  - {fileID: 9129295518884438931}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -556,7 +589,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!136 &8505774680700118319
 CapsuleCollider:
@@ -588,6 +621,25 @@ MonoBehaviour:
   walkCounter: 0
   waitCounter: 0
   isWalking: 0
+  playerCheck: {fileID: 9129295518884438931}
+  playerDistance: 3
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  isRunning: 0
+--- !u!114 &-624623411033093949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5541134392703593430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad7a1374d77a6f43b8bb1f3b3974666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemName: Mushroom
 --- !u!1 &5956948407942041124
 GameObject:
   m_ObjectHideFlags: 0
