@@ -45,18 +45,23 @@ public class AIMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Walk();
         DetectPlayer();
+        Walk();
     }
 
     public void DetectPlayer()
     {
         isRunning = Physics.CheckSphere(playerCheck.position, playerDistance, playerMask);
 
-        if (isRunning )
+        if (isRunning)
         {
-            animator.SetBool("isRunning", true);
+            isWalking = false;
             animator.SetBool("isWalking", false);
+            animator.SetBool("isRunning", true);
+        }
+        else 
+        { 
+            isWalking = true; 
         }
     }
 
@@ -64,9 +69,9 @@ public class AIMovement : MonoBehaviour
     {
         if (isWalking)
         {
-            animator.SetBool("isWalking", true);
             animator.SetBool("isRunning", false);
-
+            animator.SetBool("isWalking", true);
+            
             walkCounter -= Time.deltaTime;
 
             switch (WalkDirection)
