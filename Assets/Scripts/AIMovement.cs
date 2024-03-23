@@ -5,26 +5,26 @@ using UnityEngine.AI;
 
 public class AIMovement : MonoBehaviour
 {
-    Animator animator;
+    private Animator animator;
 
     public float moveSpeed = 1f;
 
     Vector3 stopPosition;
 
-    float walkTime;
+    private float walkTime;
     public float walkCounter;
-    float waitTime;
+    private float waitTime;
     public float waitCounter;
 
-    int WalkDirection;
+    private int WalkDirection;
 
-    public bool isWalking;
+    [SerializeField] private bool isWalking;
 
     public Transform playerCheck;
     public float playerDistance = 3f;
     public LayerMask playerMask;
 
-    public bool isRunning;
+    [SerializeField] private bool isRunning;
 
     // Start is called before the first frame update
     void Start()
