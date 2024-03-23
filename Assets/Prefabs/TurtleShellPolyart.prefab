@@ -917,6 +917,7 @@ GameObject:
   - component: {fileID: 4601609942261679349}
   - component: {fileID: 4597723160109431808}
   - component: {fileID: 4597723160109431809}
+  - component: {fileID: 2907545382302447768}
   m_Layer: 0
   m_Name: TurtleShellPolyart
   m_TagString: Untagged
@@ -991,6 +992,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.62678444
   m_Center: {x: 0.00000011920929, y: 0.45548403, z: -0.06574005}
+--- !u!114 &2907545382302447768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7095368044123538485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47bc83103149c5f48a02ca9b6c22441d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  walkCounter: 0
+  waitCounter: 0
+  isWalking: 0
 --- !u!1 &7378951520154426636
 GameObject:
   m_ObjectHideFlags: 0

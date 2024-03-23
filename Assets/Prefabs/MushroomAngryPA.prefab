@@ -496,6 +496,7 @@ GameObject:
   - component: {fileID: 1246912324737018646}
   - component: {fileID: 8505774680700118318}
   - component: {fileID: 8505774680700118319}
+  - component: {fileID: 6538437737527366279}
   m_Layer: 0
   m_Name: MushroomAngryPA
   m_TagString: Untagged
@@ -571,6 +572,22 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0.48161674, z: 0}
+--- !u!114 &6538437737527366279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5541134392703593430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47bc83103149c5f48a02ca9b6c22441d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  walkCounter: 0
+  waitCounter: 0
+  isWalking: 0
 --- !u!1 &5956948407942041124
 GameObject:
   m_ObjectHideFlags: 0
