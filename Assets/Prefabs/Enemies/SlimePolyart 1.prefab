@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 7686621819230965396}
   - component: {fileID: 7923271801087067862}
   - component: {fileID: -7899924369936431535}
+  - component: {fileID: 8697440003974371511}
   m_Layer: 0
   m_Name: SlimePolyart 1
   m_TagString: Enemy
@@ -350,6 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cad7a1374d77a6f43b8bb1f3b3974666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInRange: 0
   ItemName: Slime
 --- !u!135 &7923271801087067862
 SphereCollider:
@@ -380,6 +382,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!65 &8697440003974371511
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819766713477160542}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.447357, y: 9.801857, z: 9.848169}
+  m_Center: {x: -0.6327753, y: 0.32922268, z: -0.5149212}
 --- !u!1 &5112644000486557543
 GameObject:
   m_ObjectHideFlags: 0

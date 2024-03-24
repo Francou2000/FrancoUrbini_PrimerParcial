@@ -643,6 +643,7 @@ GameObject:
   - component: {fileID: 7000461493462377449}
   - component: {fileID: -4464465808956777997}
   - component: {fileID: 1268474648930887278}
+  - component: {fileID: 4065967297684170227}
   m_Layer: 8
   m_Name: CactusCore
   m_TagString: Untagged
@@ -685,6 +686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cad7a1374d77a6f43b8bb1f3b3974666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInRange: 0
   ItemName: Cactus Core
 --- !u!135 &1268474648930887278
 SphereCollider:
@@ -699,6 +701,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2.0637512
   m_Center: {x: -0.0680542, y: 1.7744946, z: 0.3274536}
+--- !u!65 &4065967297684170227
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7002887439597474475}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30.771484, y: 13.289193, z: 39.477234}
+  m_Center: {x: 1.0388184, y: 6.144591, z: -0.34866333}
 --- !u!1 &7002946448350219283
 GameObject:
   m_ObjectHideFlags: 0

@@ -726,6 +726,7 @@ GameObject:
   - component: {fileID: 3185037793317858830}
   - component: {fileID: 8636587168181370915}
   - component: {fileID: 6166843261471034167}
+  - component: {fileID: 272871575633039213}
   m_Layer: 8
   m_Name: SlimeCore
   m_TagString: Untagged
@@ -768,6 +769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cad7a1374d77a6f43b8bb1f3b3974666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInRange: 0
   ItemName: Slime Core
 --- !u!135 &6166843261471034167
 SphereCollider:
@@ -782,6 +784,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2.3718288
   m_Center: {x: -0.01449585, y: 1.4905939, z: 0.34469604}
+--- !u!65 &272871575633039213
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3188301151466904202}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30.771484, y: 13.289193, z: 39.477234}
+  m_Center: {x: 1.0388184, y: 6.144591, z: -0.34866333}
 --- !u!1 &3188365596919716624
 GameObject:
   m_ObjectHideFlags: 0

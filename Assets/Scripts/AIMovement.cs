@@ -39,7 +39,6 @@ public class AIMovement : MonoBehaviour
         walkTime = Random.Range(7, 10);
         waitTime = Random.Range(3, 5);
 
-
         waitCounter = waitTime;
         walkCounter = walkTime;
 
@@ -60,6 +59,9 @@ public class AIMovement : MonoBehaviour
         if (isRunning)
         {
             isWalking = false;
+
+            moveSpeed = 1.5f;
+
             animator.SetBool("isWalking", false);
             animator.SetBool("isRunning", true);
 
@@ -68,7 +70,10 @@ public class AIMovement : MonoBehaviour
         }
         else
         {
-            isWalking = true;
+            if (walkTime > 0f)
+            {
+                isWalking = true;
+            }
         }
     }
 
@@ -79,6 +84,8 @@ public class AIMovement : MonoBehaviour
         {
             animator.SetBool("isRunning", false);
             animator.SetBool("isWalking", true);
+
+            moveSpeed = 1f;
             
             walkCounter -= Time.deltaTime;
 
@@ -106,19 +113,22 @@ public class AIMovement : MonoBehaviour
             {
                 stopPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
                 isWalking = false;
+
                 //stop movement
                 transform.position = stopPosition;
                 animator.SetBool("isWalking", false);
-                //reset the waitCounter
-                waitCounter = waitTime;
             }
         }
-        else
+        if (!isWalking && !isRunning)
         {
-            waitCounter -= Time.deltaTime;
-
-            if (waitCounter <= 0)
+            // Waiting behavior...
+            if (waitCounter > 0)  // Only decrement if there is time left to wait
             {
+                waitCounter -= Time.deltaTime;
+            }
+            else
+            {
+                // Choose new direction after waiting
                 ChooseDirection();
             }
         }
@@ -128,8 +138,10 @@ public class AIMovement : MonoBehaviour
     {
         WalkDirection = Random.Range(0, 4);
 
-        isWalking = true;
         walkCounter = walkTime;
+        waitCounter = waitTime;
+
+        isWalking = true;
     }
 
     public void OnDrawGizmos()

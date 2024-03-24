@@ -4,10 +4,36 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
+    public bool playerInRange;
+
     public string ItemName;
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && playerInRange && SelectionManager.Instance.onTarget && !this.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+        }
+    }
 
     public string GetItemName()
     {
         return ItemName;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = false;
+        }
     }
 }

@@ -529,6 +529,7 @@ GameObject:
   - component: {fileID: 8505774680700118319}
   - component: {fileID: 6538437737527366279}
   - component: {fileID: -624623411033093949}
+  - component: {fileID: 6494274474638752166}
   m_Layer: 0
   m_Name: MushroomAngryPA
   m_TagString: Enemy
@@ -640,7 +641,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cad7a1374d77a6f43b8bb1f3b3974666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInRange: 0
   ItemName: Mushroom
+--- !u!65 &6494274474638752166
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5541134392703593430}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.882799, y: 9.565942, z: 10.381734}
+  m_Center: {x: -0.46264052, y: 0.84448195, z: -0.880342}
 --- !u!1 &5956948407942041124
 GameObject:
   m_ObjectHideFlags: 0
