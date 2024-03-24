@@ -55,8 +55,6 @@ public class PlayerMovement : MonoBehaviour
         // Check for jump input
         if (Input.GetButtonDown("Jump"))
         {
-            animator.SetTrigger("Jump");
-
             // Check if the player is grounded and moving forward/backward
             if (isGrounded && Mathf.Abs(z) > 0.1f)
             {
