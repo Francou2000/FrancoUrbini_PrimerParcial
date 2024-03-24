@@ -1042,11 +1042,12 @@ MonoBehaviour:
   waitCounter: 0
   isWalking: 0
   playerCheck: {fileID: 6716484859026739126}
-  playerDistance: 3
+  playerDistance: 6
   playerMask:
     serializedVersion: 2
     m_Bits: 128
   isRunning: 0
+  player: {fileID: 8656194435090311156, guid: bc8c325f251a77f4ab5ad29aed6ea815, type: 3}
 --- !u!114 &6380389600982889858
 MonoBehaviour:
   m_ObjectHideFlags: 0

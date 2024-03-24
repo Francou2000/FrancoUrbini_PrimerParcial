@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using static UnityEngine.GraphicsBuffer;
+using UnityEngine.UIElements;
 
 public class AIMovement : MonoBehaviour
 {
@@ -25,6 +27,8 @@ public class AIMovement : MonoBehaviour
     public LayerMask playerMask;
 
     [SerializeField] private bool isRunning;
+
+    public Transform player;
 
     // Start is called before the first frame update
     void Start()
@@ -58,12 +62,16 @@ public class AIMovement : MonoBehaviour
             isWalking = false;
             animator.SetBool("isWalking", false);
             animator.SetBool("isRunning", true);
+
+            transform.LookAt(player.position);
+            transform.position = Vector3.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
         }
-        else 
-        { 
-            isWalking = true; 
+        else
+        {
+            isWalking = true;
         }
     }
+
 
     public void Walk() 
     {

@@ -97,5 +97,10 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetBool("isWalking", true);
             }
         }
+        if (!isMoving)
+        {
+            animator.SetBool("isWalking", false);
+            animator.SetBool("isRunning", false);
+        }
     }
 }
