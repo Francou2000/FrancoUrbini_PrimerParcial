@@ -35,6 +35,7 @@ public class SelectionManager : MonoBehaviour
                 else
                 {
                     interactionText.text = selectionTransform.GetComponent<InteractableObject>().GetItemName();
+                    interactionText.color = Color.white;
                     interactionInfoUI.SetActive(true);
                 }
             }
