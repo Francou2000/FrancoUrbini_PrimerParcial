@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,10 +8,9 @@ public class Inventory : MonoBehaviour
     public static Inventory Instance { get; private set; }
 
     public int potions = 0;
-    public int cactusCore = 0;
-    public int turtleCore = 0;
-    public int slimeCore = 0;
-    public int mushroomCore = 0;
+
+    //slime = 0, cactus = 1, turtle = 2, mushroom = 3 
+    public int[] coreItems = new int [4];
 
     private void Awake()
     {
@@ -23,5 +23,4 @@ public class Inventory : MonoBehaviour
             Instance = this;
         }
     }
-
 }
