@@ -29,6 +29,8 @@ public class SelectionManager : MonoBehaviour
     private void Start()
     {
         interactionText = interactionInfoUI.GetComponent<TextMeshProUGUI>();
+
+        Cursor.visible = false;
     }
 
     void Update()
