@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 8670954559619711002}
   - component: {fileID: 3156406540413613632}
   - component: {fileID: 2543697930454940841}
+  - component: {fileID: 7665642019272495820}
+  - component: {fileID: 1387447162918170842}
   m_Layer: 0
   m_Name: TurtleCorner
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,8 +97,35 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.7352626, y: 1, z: 1.9938972}
-  m_Center: {x: -0.07113563, y: 0, z: -0.04263791}
+  m_Size: {x: 3.5711305, y: 1, z: 3.1835573}
+  m_Center: {x: -0.05565644, y: 0, z: -0.09675798}
+--- !u!114 &7665642019272495820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28886973383623592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad7a1374d77a6f43b8bb1f3b3974666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInRange: 0
+  ItemName: Insert 3 Turtle Cores
+--- !u!65 &1387447162918170842
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28886973383623592}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: -0.000015258789, y: 0.000000059604645, z: 0}
 --- !u!1 &896362855577437559
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,9 +138,11 @@ GameObject:
   - component: {fileID: 3826915844542342022}
   - component: {fileID: 5426970345973463284}
   - component: {fileID: 6079681404157790616}
+  - component: {fileID: 7857524853196200823}
+  - component: {fileID: 7976234072967788174}
   m_Layer: 0
   m_Name: SlimeCorner
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -192,8 +223,35 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.3695982, y: 1, z: 2.3132782}
-  m_Center: {x: 0.02241785, y: 0, z: 0.031872105}
+  m_Size: {x: 3.6697016, y: 1, z: 3.2831852}
+  m_Center: {x: -0.008514433, y: 0, z: 0.060586933}
+--- !u!114 &7857524853196200823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896362855577437559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad7a1374d77a6f43b8bb1f3b3974666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInRange: 0
+  ItemName: Insert 3 Slime Cores
+--- !u!65 &7976234072967788174
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896362855577437559}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: -0.0000371933, y: 0.000000059604645, z: 0}
 --- !u!1 &2646094283546875860
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,9 +265,10 @@ GameObject:
   - component: {fileID: 601306383423163162}
   - component: {fileID: 6438746010163300055}
   - component: {fileID: 6720484370686287367}
+  - component: {fileID: 3859205322531098283}
   m_Layer: 0
   m_Name: obelisk_main
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -303,8 +362,22 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.325684, y: 14.345584, z: 10.923523}
-  m_Center: {x: -0.2010498, y: 6.190944, z: -0.09799194}
+  m_Size: {x: 10.325684, y: 14.345584, z: 11.277039}
+  m_Center: {x: -0.2010498, y: 6.190944, z: -0.27474976}
+--- !u!114 &3859205322531098283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2646094283546875860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad7a1374d77a6f43b8bb1f3b3974666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInRange: 0
+  ItemName: When every obelisk is turned on the final boss will appear
 --- !u!1 &2987981672123855570
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +395,7 @@ GameObject:
   - component: {fileID: 6399409148204607598}
   m_Layer: 0
   m_Name: obelisk_side
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -460,9 +533,11 @@ GameObject:
   - component: {fileID: 3367025279051277399}
   - component: {fileID: 674803310721371450}
   - component: {fileID: 5951238791487792191}
+  - component: {fileID: 2037521197066261090}
+  - component: {fileID: 9052078075638958482}
   m_Layer: 0
   m_Name: CactusCorner
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -543,8 +618,35 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.5768294, y: 1, z: 2.1571805}
-  m_Center: {x: -0.13412677, y: 0, z: -0.017745765}
+  m_Size: {x: 3.381651, y: 1, z: 2.9682329}
+  m_Center: {x: -0.10315481, y: 0, z: -0.07177989}
+--- !u!114 &2037521197066261090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3532959627764103655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad7a1374d77a6f43b8bb1f3b3974666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInRange: 0
+  ItemName: Insert 3 Cactus Cores
+--- !u!65 &9052078075638958482
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3532959627764103655}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0.000005722046, y: 0.000000059604645, z: 0}
 --- !u!1 &3766414769607719627
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,9 +659,11 @@ GameObject:
   - component: {fileID: 7382820787527705732}
   - component: {fileID: 5075628498228619534}
   - component: {fileID: 9123216840403105650}
+  - component: {fileID: 1163025620334687584}
+  - component: {fileID: 8961392946280077581}
   m_Layer: 0
   m_Name: MushroomCorner
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -640,8 +744,35 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.2394793, y: 1, z: 2.3985376}
-  m_Center: {x: 0.10365818, y: 0, z: 0.028363988}
+  m_Size: {x: 3.6324887, y: 1, z: 3.0203967}
+  m_Center: {x: 0.11914659, y: 0, z: -0.0122231}
+--- !u!114 &1163025620334687584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3766414769607719627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad7a1374d77a6f43b8bb1f3b3974666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInRange: 0
+  ItemName: Insert 3 Mushroom Cores
+--- !u!65 &8961392946280077581
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3766414769607719627}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: -0.000038146973, y: 0.000000059604645, z: 0}
 --- !u!1 &4899658678682777773
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,7 +784,7 @@ GameObject:
   - component: {fileID: 5239029107848356375}
   m_Layer: 0
   m_Name: Obelisk_zodiac_low
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -695,7 +826,7 @@ GameObject:
   - component: {fileID: 5626613288029011736}
   m_Layer: 0
   m_Name: obelisk_plate_side
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -793,7 +924,7 @@ GameObject:
   - component: {fileID: 9086115274681066076}
   m_Layer: 0
   m_Name: obelisk_plate
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
