@@ -12,7 +12,8 @@ public class ObeliskCorner : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && Inventory.Instance.coreItems[(int)coreItems] == 3)
         {
-            gameObject.GetComponent<MeshCollider>().enabled = true;
+            gameObject.GetComponent<MeshRenderer>().enabled = true;
+            isOn = true;
         }
     }
 }

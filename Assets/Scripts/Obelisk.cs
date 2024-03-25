@@ -6,19 +6,16 @@ public class Obelisk : MonoBehaviour
 {
     public ObeliskCorner[] obeliskCorners = new ObeliskCorner[4];
 
-    private void OnTriggerStay(Collider other)
+    public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Activate();
-        }
+        Activate();
     }
 
     public void Activate()
     {
         if (obeliskCorners[0].isOn && obeliskCorners[1].isOn && obeliskCorners[2].isOn && obeliskCorners[3].isOn)
         {
-            
+            gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
         }
     }
 }
