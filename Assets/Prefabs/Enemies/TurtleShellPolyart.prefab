@@ -1063,6 +1063,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   ItemName: Turtle
+  coreItems: 0
 --- !u!114 &6408848617850167577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1076,8 +1077,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  respawnTime: 60
   dropCore: {fileID: 6095856601853579550, guid: d7bc72fd7f13e2741b3f915b204c11c4, type: 3}
   dropPotion: {fileID: 5445354998379417915, guid: a689d4abd854bb746891363398d4ea7c, type: 3}
+  newEnemy: {fileID: 7095368044123538485}
 --- !u!1 &7378951520154426636
 GameObject:
   m_ObjectHideFlags: 0

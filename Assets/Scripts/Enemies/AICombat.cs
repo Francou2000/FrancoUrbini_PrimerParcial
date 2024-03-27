@@ -6,10 +6,10 @@ public class AICombat : MonoBehaviour
 {
     public float health = 1f;
 
-    private int drop;
-
     public GameObject dropCore;
     public GameObject dropPotion;
+
+    private int drop;
 
     private Animator animator;
 
@@ -37,15 +37,13 @@ public class AICombat : MonoBehaviour
 
         animator.SetTrigger("Dead");
 
-        StartCoroutine(DestroyAfterAnimation());
+        StartCoroutine(DeathRoutine());
     }
 
-    private IEnumerator DestroyAfterAnimation()
+    private System.Collections.IEnumerator DeathRoutine()
     {
-        // Wait for the death animation to finish playing
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
 
-        // Instantiate drop if necessary
         switch (drop)
         {
             case 0:
@@ -63,7 +61,6 @@ public class AICombat : MonoBehaviour
                 break;
         }
 
-        // Destroy the GameObject
-        Destroy(gameObject);
+        Destroy(this.gameObject);
     }
 }

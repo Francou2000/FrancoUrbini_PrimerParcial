@@ -643,6 +643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   ItemName: Mushroom
+  coreItems: 0
 --- !u!114 &3550339989644163859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,8 +657,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  respawnTime: 60
   dropCore: {fileID: 4771776615217600990, guid: 63f2639432c8f364c85de453a211b9ba, type: 3}
   dropPotion: {fileID: 5445354998379417915, guid: a689d4abd854bb746891363398d4ea7c, type: 3}
+  newEnemy: {fileID: 5541134392703593430}
 --- !u!1 &5956948407942041124
 GameObject:
   m_ObjectHideFlags: 0
