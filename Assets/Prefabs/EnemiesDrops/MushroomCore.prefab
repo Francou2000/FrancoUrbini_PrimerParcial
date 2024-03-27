@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4769166971795995450}
   - component: {fileID: 4775602423163978500}
   - component: {fileID: 4785944009825330490}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BetterCrystal01 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,9 +95,9 @@ GameObject:
   - component: {fileID: 4597376786485931672}
   - component: {fileID: -5493233315189158057}
   - component: {fileID: 4680069717084262166}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: MushroomCore
-  m_TagString: Untagged
+  m_TagString: MushroomCore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,6 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   ItemName: Mushroom Core
+  coreItems: 3
 --- !u!135 &-5493233315189158057
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -176,7 +177,7 @@ GameObject:
   - component: {fileID: 4769201631369282884}
   - component: {fileID: 4776988462422779794}
   - component: {fileID: 4786271071100912332}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BetterCrystal01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +260,7 @@ GameObject:
   - component: {fileID: 4769822058579757722}
   - component: {fileID: 4775535949304699066}
   - component: {fileID: 4786258154580964786}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BetterCrystal01 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -342,7 +343,7 @@ GameObject:
   - component: {fileID: 4769571511038421984}
   - component: {fileID: 4777180200899769360}
   - component: {fileID: 4786305645151349564}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BetterCrystal01 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -425,7 +426,7 @@ GameObject:
   - component: {fileID: 4769604519253665344}
   - component: {fileID: 4777043455996886082}
   - component: {fileID: 4787218579824336754}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BetterCrystal01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -508,7 +509,7 @@ GameObject:
   - component: {fileID: 4769121098830594370}
   - component: {fileID: 4775543882965380224}
   - component: {fileID: 4786718529973130462}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BetterCrystal01 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -591,7 +592,7 @@ GameObject:
   - component: {fileID: 4769566302179222238}
   - component: {fileID: 4881532887028519544}
   - component: {fileID: 58964325393467273}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Point light (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -808,7 +809,7 @@ GameObject:
   - component: {fileID: 4768972638430485180}
   - component: {fileID: 4776944909281441726}
   - component: {fileID: 4786458962907671288}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: BetterCrystal01 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

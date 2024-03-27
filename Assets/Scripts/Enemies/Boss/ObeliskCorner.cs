@@ -23,5 +23,6 @@ public enum coreItems
     slimeCore,
     cactusCore,
     turtleCore,
-    mushroomCore
+    mushroomCore,
+    potion
 }

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3760635893096732954}
   m_Layer: 0
   m_Name: Potion
-  m_TagString: Untagged
+  m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,6 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   ItemName: Potion
+  coreItems: 4
 --- !u!65 &3760635893096732954
 BoxCollider:
   m_ObjectHideFlags: 0

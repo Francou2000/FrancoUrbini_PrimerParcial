@@ -2,9 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
+    public TextMeshProUGUI pCounter;
+    public TextMeshProUGUI scCounter;
+    public TextMeshProUGUI ccCounter;
+    public TextMeshProUGUI tcCounter;
+    public TextMeshProUGUI mcCounter;
     public static Inventory Instance { get; private set; }
 
     public int potions = 0;
@@ -22,5 +29,14 @@ public class Inventory : MonoBehaviour
         {
             Instance = this;
         }
+    }
+
+    private void Update()
+    {
+        pCounter.text = potions.ToString();
+        scCounter.text = coreItems[0].ToString();
+        ccCounter.text = coreItems[1].ToString();
+        mcCounter.text = coreItems[3].ToString();
+        tcCounter.text = coreItems[2].ToString();
     }
 }
