@@ -10,7 +10,7 @@ public class InteractableObject : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && playerInRange && SelectionManager.Instance.onTarget && !this.gameObject.CompareTag("Enemy") && !this.gameObject.CompareTag("Background"))
+        if (Input.GetKeyDown(KeyCode.E) && playerInRange && SelectionManager.Instance.onTarget && !this.gameObject.CompareTag("Background"))
         {
             Destroy(gameObject);
         }

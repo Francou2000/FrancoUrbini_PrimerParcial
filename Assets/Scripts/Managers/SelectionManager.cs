@@ -46,19 +46,9 @@ public class SelectionManager : MonoBehaviour
             if (interactableObject && interactableObject.playerInRange)
             {
                 onTarget = true;
-
-                if (selectionTransform.tag == "Enemy")
-                {
-                    interactionText.text = interactableObject.GetItemName();
-                    interactionText.color = Color.red;
-                    interactionInfoUI.SetActive(true);
-                }
-                else
-                {
-                    interactionText.text = interactableObject.GetItemName();
-                    interactionText.color = Color.white;
-                    interactionInfoUI.SetActive(true);
-                }
+               
+                interactionText.text = interactableObject.GetItemName();
+                interactionInfoUI.SetActive(true);
             }
             else
             {

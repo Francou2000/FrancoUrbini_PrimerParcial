@@ -620,7 +620,7 @@ GameObject:
   - component: {fileID: 2037935923289130008}
   - component: {fileID: -4751665706578137814}
   - component: {fileID: 160370184599216598}
-  - component: {fileID: 1138577375848156020}
+  - component: {fileID: 6871569384429301092}
   m_Layer: 0
   m_Name: CactusPA
   m_TagString: Enemy
@@ -734,19 +734,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   ItemName: Cactus
---- !u!65 &1138577375848156020
-BoxCollider:
+--- !u!114 &6871569384429301092
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8888542690951001737}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 11.1669445, y: 9.662654, z: 9.566616}
-  m_Center: {x: 0.1293087, y: 0.24473333, z: -0.80457115}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fd2802fca0d558438d9604eba12078f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  dropCore: {fileID: 7002887439597474475, guid: b87c89bf4bd6bf44caeed8d4b6928c4b, type: 3}
+  dropPotion: {fileID: 5445354998379417915, guid: a689d4abd854bb746891363398d4ea7c, type: 3}
 --- !u!1 &9195342924026356037
 GameObject:
   m_ObjectHideFlags: 0

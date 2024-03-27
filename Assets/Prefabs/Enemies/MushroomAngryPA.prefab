@@ -529,7 +529,7 @@ GameObject:
   - component: {fileID: 8505774680700118319}
   - component: {fileID: 6538437737527366279}
   - component: {fileID: -624623411033093949}
-  - component: {fileID: 6494274474638752166}
+  - component: {fileID: 3550339989644163859}
   m_Layer: 0
   m_Name: MushroomAngryPA
   m_TagString: Enemy
@@ -643,19 +643,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInRange: 0
   ItemName: Mushroom
---- !u!65 &6494274474638752166
-BoxCollider:
+--- !u!114 &3550339989644163859
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5541134392703593430}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 9.882799, y: 9.565942, z: 10.381734}
-  m_Center: {x: -0.46264052, y: 0.84448195, z: -0.880342}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fd2802fca0d558438d9604eba12078f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  dropCore: {fileID: 4771776615217600990, guid: 63f2639432c8f364c85de453a211b9ba, type: 3}
+  dropPotion: {fileID: 5445354998379417915, guid: a689d4abd854bb746891363398d4ea7c, type: 3}
 --- !u!1 &5956948407942041124
 GameObject:
   m_ObjectHideFlags: 0

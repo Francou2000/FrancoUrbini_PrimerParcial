@@ -20,13 +20,18 @@ public class Sword : MonoBehaviour
 
     void Update()
     {
+        Attack();
+    }
+
+    void Attack()
+    {
         time += Time.deltaTime;
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             animator.SetBool("isAttacking", true);
-            GetComponentInParent<BoxCollider>().enabled = true;
-            time = 0;           
+            GetComponent<BoxCollider>().enabled = true;
+            time = 0;
         }
         else
         {
@@ -35,7 +40,16 @@ public class Sword : MonoBehaviour
 
         if (time > timer)
         {
-            GetComponentInParent<BoxCollider>().enabled = false;
+            GetComponent<BoxCollider>().enabled = false;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            Debug.Log("Entra");
+            other.GetComponent<AICombat>().health -= 1;
         }
     }
 }
