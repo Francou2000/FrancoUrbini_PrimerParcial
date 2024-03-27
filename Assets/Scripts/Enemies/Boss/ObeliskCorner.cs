@@ -14,6 +14,7 @@ public class ObeliskCorner : MonoBehaviour
         {
             gameObject.GetComponent<MeshRenderer>().enabled = true;
             isOn = true;
+            Inventory.Instance.coreItems[(int)coreItems] -= 3;
         }
     }
 }

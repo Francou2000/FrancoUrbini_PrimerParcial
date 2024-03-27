@@ -11,6 +11,13 @@ public class AICombat : MonoBehaviour
     public GameObject dropCore;
     public GameObject dropPotion;
 
+    private Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     void Update()
     {
         if (health <= 0f)
@@ -21,52 +28,42 @@ public class AICombat : MonoBehaviour
 
     private void ChooseDrop()
     {
-        drop = Random.Range(0,9);
+        drop = Random.Range(0, 9);
     }
 
     private void Death()
     {
         ChooseDrop();
 
+        animator.SetTrigger("Dead");
+
+        StartCoroutine(DestroyAfterAnimation());
+    }
+
+    private IEnumerator DestroyAfterAnimation()
+    {
+        // Wait for the death animation to finish playing
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+
+        // Instantiate drop if necessary
         switch (drop)
         {
             case 0:
-                Instantiate(dropCore, this.transform.position, Quaternion.identity);
-                Destroy(this.gameObject);
-                break;
             case 1:
-                Instantiate(dropCore, this.transform.position, Quaternion.identity);
-                Destroy(this.gameObject);
-                break;
             case 2:
-                Instantiate(dropCore, this.transform.position, Quaternion.identity);
-                Destroy(this.gameObject);
+                Instantiate(dropCore, transform.position, Quaternion.identity);
                 break;
             case 3:
-                Instantiate(dropPotion, this.transform.position, Quaternion.identity);
-                Destroy(this.gameObject);
-                break;
             case 4:
-                Instantiate(dropPotion, this.transform.position, Quaternion.identity);
-                Destroy(this.gameObject);
-                break;
             case 5:
-                Instantiate(dropPotion, this.transform.position, Quaternion.identity);
-                Destroy(this.gameObject);
-                break;
             case 6:
-                Instantiate(dropPotion, this.transform.position, Quaternion.identity);
-                Destroy(this.gameObject);
+                Instantiate(dropPotion, transform.position, Quaternion.identity);
                 break;
-            case 7:
-                Destroy(this.gameObject);
-                break;
-            case 8:
-                Destroy(this.gameObject);
-                break;
-            case 9:
-                Destroy(this.gameObject);
+            default:
                 break;
         }
+
+        // Destroy the GameObject
+        Destroy(gameObject);
     }
 }
