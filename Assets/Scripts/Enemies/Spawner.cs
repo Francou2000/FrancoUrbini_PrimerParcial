@@ -21,7 +21,7 @@ public class Spawner : MonoBehaviour
         if (time > timer)
         {
            Instantiate(enemyToSpawn, transform.position, Quaternion.identity);
-            time = 0;   
+           time = 0;   
         }
     }
 }
