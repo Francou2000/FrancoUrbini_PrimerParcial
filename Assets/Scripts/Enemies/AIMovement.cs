@@ -26,16 +26,15 @@ public class AIMovement : MonoBehaviour
     public float playerDistance = 3f;
     public LayerMask playerMask;
 
-    [SerializeField] private bool isRunning;
+    public bool isRunning;
+    public bool isAttackRange;
 
     public Transform player;
 
-    // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
 
-        //So that all the prefabs don't move/stop at the same time
         walkTime = Random.Range(7, 10);
         waitTime = Random.Range(3, 5);
 
@@ -45,7 +44,6 @@ public class AIMovement : MonoBehaviour
         ChooseDirection();
     }
 
-    // Update is called once per frame
     void Update()
     {
         DetectPlayer();
@@ -55,6 +53,7 @@ public class AIMovement : MonoBehaviour
     public void DetectPlayer()
     {
         isRunning = Physics.CheckSphere(playerCheck.position, playerDistance, playerMask);
+        isAttackRange = Physics.CheckSphere(playerCheck.position, playerDistance/2, playerMask);
 
         if (isRunning)
         {
@@ -76,7 +75,6 @@ public class AIMovement : MonoBehaviour
             }
         }
     }
-
 
     public void Walk() 
     {
@@ -114,21 +112,18 @@ public class AIMovement : MonoBehaviour
                 stopPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
                 isWalking = false;
 
-                //stop movement
                 transform.position = stopPosition;
                 animator.SetBool("isWalking", false);
             }
         }
         if (!isWalking && !isRunning)
         {
-            // Waiting behavior...
-            if (waitCounter > 0)  // Only decrement if there is time left to wait
+            if (waitCounter > 0) 
             {
                 waitCounter -= Time.deltaTime;
             }
             else
             {
-                // Choose new direction after waiting
                 ChooseDirection();
             }
         }

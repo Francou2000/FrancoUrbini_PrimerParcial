@@ -20,6 +20,11 @@ public class AICombat : MonoBehaviour
 
     void Update()
     {
+        if(this.gameObject.GetComponent<AIMovement>().isAttackRange == true)
+        {
+            StartCoroutine(AttackRoutine());
+        }
+
         if (health <= 0f)
         {
             Death();
@@ -40,7 +45,7 @@ public class AICombat : MonoBehaviour
         StartCoroutine(DeathRoutine());
     }
 
-    private System.Collections.IEnumerator DeathRoutine()
+    private IEnumerator DeathRoutine()
     {
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
 
@@ -62,5 +67,12 @@ public class AICombat : MonoBehaviour
         }
 
         Destroy(this.gameObject);
+    }
+
+    private IEnumerator AttackRoutine()
+    {
+        animator.SetTrigger("Attack");
+
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
     }
 }

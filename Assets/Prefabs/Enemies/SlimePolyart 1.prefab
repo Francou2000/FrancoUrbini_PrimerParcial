@@ -120,12 +120,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2441780385617422179}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5307651481388614884}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &7536343175926681682
 SkinnedMeshRenderer:
@@ -270,6 +270,7 @@ GameObject:
   - component: {fileID: 7923271801087067862}
   - component: {fileID: -7899924369936431535}
   - component: {fileID: -2361767680721786360}
+  - component: {fileID: 5328779477618654889}
   m_Layer: 0
   m_Name: SlimePolyart 1
   m_TagString: Enemy
@@ -289,8 +290,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8644393789611075893}
   - {fileID: 5525010365339945669}
+  - {fileID: 8644393789611075893}
   - {fileID: 3174786919051717764}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -338,6 +339,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isRunning: 0
+  isAttackRange: 0
   player: {fileID: 8656194435090311156, guid: bc8c325f251a77f4ab5ad29aed6ea815, type: 3}
 --- !u!114 &7686621819230965396
 MonoBehaviour:
@@ -396,10 +398,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  respawnTime: 60
   dropCore: {fileID: 3188301151466904202, guid: baa8569009e406d48b8aec60cbe1bfe6, type: 3}
   dropPotion: {fileID: 5445354998379417915, guid: a689d4abd854bb746891363398d4ea7c, type: 3}
-  newEnemy: {fileID: 4819766713477160542}
+--- !u!64 &5328779477618654889
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819766713477160542}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &5112644000486557543
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,7 +444,7 @@ Transform:
   m_Children:
   - {fileID: 5078670225312706200}
   m_Father: {fileID: 5307651481388614884}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6491277292956265771
 GameObject:

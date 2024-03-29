@@ -24,10 +24,5 @@ public class PlayerState : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
-    }
-
-    void Update()
-    {
-        
-    }
+    }   
 }
