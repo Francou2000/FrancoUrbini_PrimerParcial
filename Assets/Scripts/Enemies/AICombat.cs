@@ -73,6 +73,10 @@ public class AICombat : MonoBehaviour
     {
         animator.SetTrigger("Attack");
 
+        gameObject.GetComponent<BoxCollider>().enabled = true;
+
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+
+        gameObject.GetComponent<BoxCollider>().enabled = false;
     }
 }

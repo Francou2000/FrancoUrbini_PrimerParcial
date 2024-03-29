@@ -951,7 +951,7 @@ GameObject:
   - component: {fileID: 2907545382302447768}
   - component: {fileID: 6380389600982889858}
   - component: {fileID: 6408848617850167577}
-  - component: {fileID: 2030019879040069313}
+  - component: {fileID: 2342858411256637759}
   m_Layer: 0
   m_Name: TurtleShellPolyart
   m_TagString: Enemy
@@ -1081,20 +1081,19 @@ MonoBehaviour:
   health: 1
   dropCore: {fileID: 6095856601853579550, guid: d7bc72fd7f13e2741b3f915b204c11c4, type: 3}
   dropPotion: {fileID: 5445354998379417915, guid: a689d4abd854bb746891363398d4ea7c, type: 3}
---- !u!64 &2030019879040069313
-MeshCollider:
+--- !u!65 &2342858411256637759
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7095368044123538485}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.915354, y: 1.6056528, z: 2.3961565}
+  m_Center: {x: 0.028690696, y: 0.8478279, z: 0.6980783}
 --- !u!1 &7378951520154426636
 GameObject:
   m_ObjectHideFlags: 0
