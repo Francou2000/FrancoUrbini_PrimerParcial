@@ -101,6 +101,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7457f4e241a5014c9a2d420ff8a6060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 1
+  health: 1
+  playerCheck: {fileID: 8656194435090311156, guid: bc8c325f251a77f4ab5ad29aed6ea815, type: 3}
+  playerDistance: 3
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  isRunning: 0
+  isAttackRange: 0
+  player: {fileID: 8656194435090311156, guid: bc8c325f251a77f4ab5ad29aed6ea815, type: 3}
 --- !u!65 &2629892878550759829
 BoxCollider:
   m_ObjectHideFlags: 0
