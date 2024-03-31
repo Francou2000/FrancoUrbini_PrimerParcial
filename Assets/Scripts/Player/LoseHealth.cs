@@ -6,11 +6,24 @@ public class LoseHealth : MonoBehaviour
 {
     public float damageReceived = 10;
 
-    private void OnTriggerEnter(Collider other)
+    [SerializeField] private float invincibleFrames= 2.5f;
+
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            PlayerState.Instance.currentHealth -= damageReceived;
+            StartCoroutine(LoseHealthRoutine());
         }
+    }
+
+    private IEnumerator LoseHealthRoutine()
+    {
+        PlayerState.Instance.currentHealth -= damageReceived;
+
+        gameObject.GetComponent<CapsuleCollider>().enabled = false;
+
+        yield return new WaitForSeconds(invincibleFrames);
+
+        gameObject.GetComponent<CapsuleCollider>().enabled = true;
     }
 }
