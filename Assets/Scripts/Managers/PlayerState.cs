@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerState : MonoBehaviour
 {
@@ -24,5 +25,13 @@ public class PlayerState : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
-    }   
+    }
+
+    private void Update()
+    {
+        if (currentHealth <= 0)
+        {
+            SceneManager.LoadScene("LoseScene");
+        }
+    }
 }
