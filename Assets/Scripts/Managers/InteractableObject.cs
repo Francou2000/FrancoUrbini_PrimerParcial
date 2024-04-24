@@ -11,6 +11,33 @@ public class InteractableObject : MonoBehaviour
 
     public coreItems coreItems;
 
+    private IPickUp pickUp;
+
+    private void Start()
+    {
+        
+        switch (coreItems)
+        {
+            case coreItems.slimeCore:
+                pickUp = new SlimeCorePickUp();
+                break;
+            case coreItems.mushroomCore:
+                pickUp = new MushroomCorePickUp();
+                break;
+            case coreItems.turtleCore:
+                pickUp = new TurtleCorePickUp();
+                break;
+            case coreItems.cactusCore:
+                pickUp = new CactusCorePickUp();
+                break;
+            case coreItems.potion:
+                pickUp = new PotionPickUp();
+                break;
+            default:
+                break;       
+        }
+    }
+
     public void Update()
     {
         PickUp();
@@ -20,29 +47,8 @@ public class InteractableObject : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && playerInRange && SelectionManager.Instance.onTarget && !this.gameObject.CompareTag("Background"))
         {
-            switch (coreItems)
-            {
-                case coreItems.slimeCore:
-                    Inventory.Instance.coreItems[0]++;
-                    Destroy(this.gameObject);
-                    break;
-                case coreItems.mushroomCore:
-                    Inventory.Instance.coreItems[3]++;
-                    Destroy(this.gameObject);
-                    break;
-                case coreItems.cactusCore:
-                    Inventory.Instance.coreItems[1]++;
-                    Destroy(this.gameObject);
-                    break;
-                case coreItems.turtleCore:
-                    Inventory.Instance.coreItems[2]++;
-                    Destroy(this.gameObject);
-                    break;
-                case coreItems.potion:
-                    Inventory.Instance.potions++;
-                    Destroy(this.gameObject);
-                    break;
-            }
+            pickUp.PickUp();
+            Destroy(this.gameObject);        
         }
     }
 
@@ -67,3 +73,4 @@ public class InteractableObject : MonoBehaviour
         }
     }
 }
+
