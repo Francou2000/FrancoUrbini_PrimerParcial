@@ -22,7 +22,6 @@ public class TimeController : MonoBehaviour
 
     void Update()
     {
-        isTimeStopped = !isTimeStopped;
         if (isTimeStopped)
         {
             Time.timeScale = 0f;
