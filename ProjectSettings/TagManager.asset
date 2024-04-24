@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Enemy
   - Background
+  - Potion
+  - SlimeCore
+  - TurtleCore
+  - MushroomCore
+  - CactusCore
+  - Boss
   layers:
   - Default
   - TransparentFX

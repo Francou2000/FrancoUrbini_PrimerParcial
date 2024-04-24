@@ -13,8 +13,8 @@ public class AIBoss : MonoBehaviour
     public float playerDistance = 3f;
     public LayerMask playerMask;
 
-    public bool isRunning;
-    public bool isAttackRange;
+    public bool isRunning = false;
+    public bool isAttackRange = false;
 
     public Transform player;
 
@@ -43,21 +43,23 @@ public class AIBoss : MonoBehaviour
         isRunning = Physics.CheckSphere(playerCheck.position, playerDistance, playerMask);
         isAttackRange = Physics.CheckSphere(playerCheck.position, playerDistance / 2, playerMask);
 
-        if (isRunning)
+        if (isRunning == true)
         {
             animator.SetBool("isRunning", true);
 
             moveSpeed = 1;
 
+            player = GameObject.FindGameObjectWithTag("Player").transform;
+
             transform.LookAt(player.position);
             transform.position = Vector3.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
         }
-        else
+        else if (isRunning == false)
         {
             animator.SetBool("isRunning", false);
 
             moveSpeed = 0;
-        }      
+        }  
     }
 
     private IEnumerator DeathRoutine()

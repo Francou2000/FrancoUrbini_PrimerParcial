@@ -51,5 +51,10 @@ public class Sword : MonoBehaviour
             Debug.Log("Entra");
             other.GetComponent<AICombat>().health -= 1;
         }
+        if (other.CompareTag("Boss"))
+        {
+            Debug.Log("Entra");
+            other.GetComponent<AIBoss>().health -= 1;
+        }
     }
 }
