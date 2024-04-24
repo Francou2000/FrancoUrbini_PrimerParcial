@@ -949,7 +949,6 @@ GameObject:
   - component: {fileID: 4597723160109431808}
   - component: {fileID: 4597723160109431809}
   - component: {fileID: 2907545382302447768}
-  - component: {fileID: 6380389600982889858}
   - component: {fileID: 6408848617850167577}
   - component: {fileID: 2342858411256637759}
   m_Layer: 0
@@ -1051,21 +1050,6 @@ MonoBehaviour:
   isRunning: 0
   isAttackRange: 0
   player: {fileID: 8656194435090311156, guid: bc8c325f251a77f4ab5ad29aed6ea815, type: 3}
---- !u!114 &6380389600982889858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7095368044123538485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cad7a1374d77a6f43b8bb1f3b3974666, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerInRange: 0
-  ItemName: Turtle
-  coreItems: 0
 --- !u!114 &6408848617850167577
 MonoBehaviour:
   m_ObjectHideFlags: 0

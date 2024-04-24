@@ -6,6 +6,8 @@ public class AIBoss : MonoBehaviour
 {
     private Animator animator;
 
+    public GameObject gameManager;
+
     public float moveSpeed = 1f;
     public float health = 1f;
 
@@ -41,7 +43,8 @@ public class AIBoss : MonoBehaviour
     public void DetectPlayer()
     {
         isRunning = Physics.CheckSphere(playerCheck.position, playerDistance, playerMask);
-        isAttackRange = Physics.CheckSphere(playerCheck.position, playerDistance / 2, playerMask);
+        isAttackRange = Physics.CheckSphere(playerCheck.position, playerDistance / 1.25f, playerMask);
+
 
         if (isRunning == true)
         {
@@ -69,6 +72,8 @@ public class AIBoss : MonoBehaviour
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
 
         Destroy(this.gameObject);
+
+        GameManager.Instance.Win();
     }
 
     private IEnumerator AttackRoutine()

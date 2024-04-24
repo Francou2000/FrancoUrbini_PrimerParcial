@@ -266,7 +266,6 @@ GameObject:
   - component: {fileID: 5307651481388614884}
   - component: {fileID: 5630108233184890486}
   - component: {fileID: 5630108233184890487}
-  - component: {fileID: 7686621819230965396}
   - component: {fileID: 7923271801087067862}
   - component: {fileID: -7899924369936431535}
   - component: {fileID: -2361767680721786360}
@@ -341,21 +340,6 @@ MonoBehaviour:
   isRunning: 0
   isAttackRange: 0
   player: {fileID: 8656194435090311156, guid: bc8c325f251a77f4ab5ad29aed6ea815, type: 3}
---- !u!114 &7686621819230965396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4819766713477160542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cad7a1374d77a6f43b8bb1f3b3974666, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerInRange: 0
-  ItemName: Slime
-  coreItems: 0
 --- !u!135 &7923271801087067862
 SphereCollider:
   m_ObjectHideFlags: 0
