@@ -26,12 +26,4 @@ public class PlayerState : MonoBehaviour
     {
         currentHealth = maxHealth;
     }
-
-    private void Update()
-    {
-        if (currentHealth <= 0)
-        {
-            SceneManager.LoadScene("LoseScene");
-        }
-    }
 }

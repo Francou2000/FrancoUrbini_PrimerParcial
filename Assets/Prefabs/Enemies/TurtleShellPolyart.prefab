@@ -948,9 +948,8 @@ GameObject:
   - component: {fileID: 4601609942261679349}
   - component: {fileID: 4597723160109431808}
   - component: {fileID: 4597723160109431809}
-  - component: {fileID: 2907545382302447768}
-  - component: {fileID: 6408848617850167577}
   - component: {fileID: 2342858411256637759}
+  - component: {fileID: 4224420436443267413}
   m_Layer: 0
   m_Name: TurtleShellPolyart
   m_TagString: Enemy
@@ -1026,45 +1025,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5329921
   m_Center: {x: 0.00000011920929, y: 0.54927635, z: -0.06574005}
---- !u!114 &2907545382302447768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7095368044123538485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47bc83103149c5f48a02ca9b6c22441d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
-  walkCounter: 0
-  waitCounter: 0
-  isWalking: 0
-  playerCheck: {fileID: 6716484859026739126}
-  playerDistance: 6
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 128
-  isRunning: 0
-  isAttackRange: 0
-  player: {fileID: 8656194435090311156, guid: bc8c325f251a77f4ab5ad29aed6ea815, type: 3}
---- !u!114 &6408848617850167577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7095368044123538485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fd2802fca0d558438d9604eba12078f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
-  dropCore: {fileID: 6095856601853579550, guid: d7bc72fd7f13e2741b3f915b204c11c4, type: 3}
-  dropPotion: {fileID: 5445354998379417915, guid: a689d4abd854bb746891363398d4ea7c, type: 3}
 --- !u!65 &2342858411256637759
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1078,6 +1038,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.915354, y: 1.6056528, z: 2.3961565}
   m_Center: {x: 0.028690696, y: 0.8478279, z: 0.6980783}
+--- !u!114 &4224420436443267413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7095368044123538485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5477df7736ede784fabcb7efce34685a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyData: {fileID: 11400000, guid: 041581a52251abb4ca92545ba7f422de, type: 2}
 --- !u!1 &7378951520154426636
 GameObject:
   m_ObjectHideFlags: 0
