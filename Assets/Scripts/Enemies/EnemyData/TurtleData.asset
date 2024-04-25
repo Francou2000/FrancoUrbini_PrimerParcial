@@ -16,5 +16,6 @@ MonoBehaviour:
   dropCore: {fileID: 6095856601853579550, guid: d7bc72fd7f13e2741b3f915b204c11c4, type: 3}
   dropPotion: {fileID: 5445354998379417915, guid: a689d4abd854bb746891363398d4ea7c, type: 3}
   moveSpeed: 1
+  moveSpeedMult: 1
   playerDistance: 6
   attackCooldown: 3

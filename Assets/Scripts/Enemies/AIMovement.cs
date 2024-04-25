@@ -9,7 +9,9 @@ public class AIMovement : MonoBehaviour
 {
     private Animator animator;
 
-    public float moveSpeed = 1f;
+    public Enemy enemyData;
+
+    private float moveSpeed;
 
     Vector3 stopPosition;
 
@@ -23,7 +25,6 @@ public class AIMovement : MonoBehaviour
     [SerializeField] private bool isWalking;
 
     public Transform playerCheck;
-    public float playerDistance = 3f;
     public LayerMask playerMask;
 
     public bool isRunning;
@@ -41,6 +42,8 @@ public class AIMovement : MonoBehaviour
         waitCounter = waitTime;
         walkCounter = walkTime;
 
+        moveSpeed = enemyData.moveSpeed;
+
         ChooseDirection();
     }
 
@@ -52,14 +55,12 @@ public class AIMovement : MonoBehaviour
 
     public void DetectPlayer()
     {
-        isRunning = Physics.CheckSphere(playerCheck.position, playerDistance, playerMask);
-        isAttackRange = Physics.CheckSphere(playerCheck.position, playerDistance/2, playerMask);
+        isRunning = Physics.CheckSphere(playerCheck.position, enemyData.playerDistance, playerMask);
+        isAttackRange = Physics.CheckSphere(playerCheck.position, enemyData.playerDistance/2, playerMask);
 
         if (isRunning)
         {
             isWalking = false;
-
-            moveSpeed = 1.5f;
 
             animator.SetBool("isWalking", false);
             animator.SetBool("isRunning", true);
@@ -82,8 +83,6 @@ public class AIMovement : MonoBehaviour
         {
             animator.SetBool("isRunning", false);
             animator.SetBool("isWalking", true);
-
-            moveSpeed = 1f;
             
             walkCounter -= Time.deltaTime;
 
@@ -142,6 +141,6 @@ public class AIMovement : MonoBehaviour
     public void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, playerDistance);
+        Gizmos.DrawWireSphere(transform.position, enemyData.playerDistance);
     }
 }

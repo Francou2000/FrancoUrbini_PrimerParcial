@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class AICombat : MonoBehaviour
 {
-    public float health = 1f;
+    public Enemy enemyData;
 
-    public GameObject dropCore;
-    public GameObject dropPotion;
+    public float health;
+
+    private float timer = 0f;
 
     private int drop;
 
@@ -16,13 +17,18 @@ public class AICombat : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+
+        health = enemyData.maxHealth;
     }
 
     void Update()
     {
-        if(this.gameObject.GetComponent<AIMovement>().isAttackRange == true)
+        timer -= Time.deltaTime;
+
+        if (this.gameObject.GetComponent<AIMovement>().isAttackRange == true && timer <= 0f)
         {
             StartCoroutine(AttackRoutine());
+            timer = enemyData.attackCooldown;
         }
 
         if (health <= 0f)
@@ -54,13 +60,13 @@ public class AICombat : MonoBehaviour
             case 0:
             case 1:
             case 2:
-                Instantiate(dropCore, transform.position, Quaternion.identity);
+                Instantiate(enemyData.dropCore, transform.position, Quaternion.identity);
                 break;
             case 3:
             case 4:
             case 5:
             case 6:
-                Instantiate(dropPotion, transform.position, Quaternion.identity);
+                Instantiate(enemyData.dropPotion, transform.position, Quaternion.identity);
                 break;
             default:
                 break;

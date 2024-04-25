@@ -328,12 +328,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47bc83103149c5f48a02ca9b6c22441d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
+  enemyData: {fileID: 11400000, guid: b9a4eba487f576147821f4aaeda03a01, type: 2}
   walkCounter: 0
   waitCounter: 0
   isWalking: 0
   playerCheck: {fileID: 3174786919051717764}
-  playerDistance: 6
   playerMask:
     serializedVersion: 2
     m_Bits: 128
@@ -381,9 +380,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fd2802fca0d558438d9604eba12078f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyData: {fileID: 11400000, guid: b9a4eba487f576147821f4aaeda03a01, type: 2}
   health: 1
-  dropCore: {fileID: 3188301151466904202, guid: baa8569009e406d48b8aec60cbe1bfe6, type: 3}
-  dropPotion: {fileID: 5445354998379417915, guid: a689d4abd854bb746891363398d4ea7c, type: 3}
 --- !u!65 &2527465753307526168
 BoxCollider:
   m_ObjectHideFlags: 0
