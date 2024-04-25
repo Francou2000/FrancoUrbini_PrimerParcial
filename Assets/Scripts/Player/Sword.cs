@@ -48,7 +48,7 @@ public class Sword : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            other.GetComponent<EnemyController>().enemyData.health -= 1;
+            other.GetComponent<AICombat>().health -= 1;
         }
         if (other.CompareTag("Boss"))
         {
