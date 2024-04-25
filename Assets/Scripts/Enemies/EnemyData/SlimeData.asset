@@ -15,7 +15,7 @@ MonoBehaviour:
   maxHealth: 5
   dropCore: {fileID: 3188301151466904202, guid: baa8569009e406d48b8aec60cbe1bfe6, type: 3}
   dropPotion: {fileID: 5445354998379417915, guid: a689d4abd854bb746891363398d4ea7c, type: 3}
+  prefab: {fileID: 4819766713477160542, guid: 1b993eb33649e8044800d1970feee920, type: 3}
   moveSpeed: 3
-  moveSpeedMult: 1
   playerDistance: 6
   attackCooldown: 1

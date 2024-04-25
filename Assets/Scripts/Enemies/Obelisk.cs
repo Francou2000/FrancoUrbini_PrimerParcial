@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Obelisk : MonoBehaviour
@@ -9,19 +6,30 @@ public class Obelisk : MonoBehaviour
 
     private bool canSpawnBoss = true;
     public GameObject bossSpawnPoints;
-    public GameObject boss;
+
+    public Enemy enemyType;
 
     public void Update()
     {
-        Activate();
+        if (canSpawnBoss)
+        {
+            if (obeliskCorners[0].isOn && obeliskCorners[1].isOn && obeliskCorners[2].isOn && obeliskCorners[3].isOn)
+            {
+                Activate();
+            }
+        }
     }
 
     public void Activate()
     {
-        if (obeliskCorners[0].isOn && obeliskCorners[1].isOn && obeliskCorners[2].isOn && obeliskCorners[3].isOn && canSpawnBoss)
+        if (enemyType != null)
         {
-            Instantiate(boss, bossSpawnPoints.transform.position, Quaternion.identity);
-            Deactivate();
+            GameObject enemyPrefab = enemyType.prefab; 
+            if (enemyPrefab != null)
+            {
+                Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+                Deactivate();
+            }
         }
     }
 

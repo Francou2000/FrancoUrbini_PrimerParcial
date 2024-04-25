@@ -1,5 +1,3 @@
-using System.Collections;
-using UnityEngine;
 
 public abstract class CommonEnemy : EnemyBase
 {
@@ -31,5 +29,10 @@ public abstract class CommonEnemy : EnemyBase
     public virtual void ChooseDrop()
     {
       
+    }
+
+    public override void TakeDamage(float damage)
+    {
+
     }
 }

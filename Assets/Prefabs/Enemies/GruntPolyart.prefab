@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 2492735360746369875}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 508.3014, y: 0.0000014305115, z: 507.04187}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2492735362855008471}
@@ -101,8 +101,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2.5200512, z: 4.005844}
-  m_Center: {x: 0, y: 1.215022, z: 0.9713211}
+  m_Size: {x: 1.6023254, y: 2.5200512, z: 4.005844}
+  m_Center: {x: -0.052139282, y: 1.215022, z: 0.9713211}
 --- !u!114 &1884390529658330664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,14 +116,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 3700661370209269605, guid: 2ca8c3ec1eaffbb43bb6cbe630aadd4a, type: 3}
-  moveSpeed: 1
-  health: 1
+  enemyData: {fileID: 11400000, guid: ba5964c352dbed6439ec12de3fce9b4d, type: 2}
   playerCheck: {fileID: 5177390321533875999}
-  playerDistance: 10
   playerMask:
     serializedVersion: 2
     m_Bits: 128
-  attackCooldown: 3
   isRunning: 0
   isAttackRange: 0
   player: {fileID: 8656194435090311156, guid: bc8c325f251a77f4ab5ad29aed6ea815, type: 3}

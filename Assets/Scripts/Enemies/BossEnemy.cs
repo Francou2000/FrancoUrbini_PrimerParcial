@@ -7,14 +7,14 @@ public class BossEnemy : EnemyBase
 
     public GameObject gameManager;
 
-    public float moveSpeed = 1f;
-    public float health = 1f;
+    public Enemy enemyData;
+
+    private float moveSpeed;
+    private float health = 1f;
 
     public Transform playerCheck;
-    public float playerDistance = 3f;
     public LayerMask playerMask;
 
-    public float attackCooldown = 3f;
     private float timer = 0f;
 
     public bool isRunning = false;
@@ -25,6 +25,9 @@ public class BossEnemy : EnemyBase
     void Start()
     {
         animator = GetComponent<Animator>();
+
+        moveSpeed = enemyData.moveSpeed;
+        health = enemyData.maxHealth;
     }
 
     void Update()
@@ -36,13 +39,18 @@ public class BossEnemy : EnemyBase
         if (isAttackRange == true && timer <= 0f)
         {
             Attack();
-            timer = attackCooldown;
+            timer = enemyData.attackCooldown;
         }
 
         if (health <= 0f)
         {
             Death();
         }
+    }
+
+    public override void TakeDamage(float damage)
+    {
+        health -= damage;
     }
 
     public override void Attack()
@@ -57,20 +65,18 @@ public class BossEnemy : EnemyBase
 
     public override void DetectPlayer()
     {
-        isRunning = Physics.CheckSphere(playerCheck.position, playerDistance, playerMask);
-        isAttackRange = Physics.CheckSphere(playerCheck.position, playerDistance / 1.25f, playerMask);
+        isRunning = Physics.CheckSphere(playerCheck.position, enemyData.playerDistance, playerMask);
+        isAttackRange = Physics.CheckSphere(playerCheck.position, enemyData.playerDistance / 2f, playerMask);
 
 
         if (isRunning == true)
         {
             animator.SetBool("isRunning", true);
 
-            moveSpeed = 1;
+            Collider[] colliders = Physics.OverlapSphere(playerCheck.position, enemyData.playerDistance, playerMask);
 
-            player = GameObject.FindGameObjectWithTag("Player").transform;
-
-            transform.LookAt(player.position);
-            transform.position = Vector3.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+            transform.LookAt(colliders[0].gameObject.transform.position);
+            transform.position = Vector3.MoveTowards(transform.position, colliders[0].gameObject.transform.position, moveSpeed * Time.deltaTime);
         }
         else if (isRunning == false)
         {

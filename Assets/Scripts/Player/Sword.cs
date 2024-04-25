@@ -1,22 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Sword : MonoBehaviour
 {
     private Animator animator;
 
-    private float timer;
-    private float time;
+    public float damage = 1f;
+
+    private float timer; 
+    private float cooldownTime; 
 
     void Start()
     {
         animator = GetComponent<Animator>();
-
-        time = 0;
-        timer = 1;
+        timer = 1.0f; 
+        cooldownTime = 0.0f;
     }
-
 
     void Update()
     {
@@ -25,20 +23,20 @@ public class Sword : MonoBehaviour
 
     void Attack()
     {
-        time += Time.deltaTime;
+        cooldownTime += Time.deltaTime; 
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && cooldownTime >= timer)
         {
             animator.SetBool("isAttacking", true);
             GetComponent<BoxCollider>().enabled = true;
-            time = 0;
+            cooldownTime = 0.0f; 
         }
         else
         {
             animator.SetBool("isAttacking", false);
         }
 
-        if (time > timer)
+        if (cooldownTime > timer) 
         {
             GetComponent<BoxCollider>().enabled = false;
         }
@@ -46,13 +44,9 @@ public class Sword : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.gameObject.GetComponent<EnemyBase>() != null)
         {
-            other.GetComponent<AICombat>().health -= 1;
-        }
-        if (other.CompareTag("Boss"))
-        {
-            other.GetComponent<AIBoss>().health -= 1;
+            other.gameObject.GetComponent<EnemyBase>().TakeDamage(damage);
         }
     }
 }

@@ -69,6 +69,11 @@ public class MushroomEnemy : CommonEnemy
         }
     }
 
+    public override void TakeDamage(float damage)
+    {
+        health -= damage;
+    }
+
     public override void Attack()
     {
         StartCoroutine(AttackRoutine());
