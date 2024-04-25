@@ -618,9 +618,8 @@ GameObject:
   - component: {fileID: 8618512729652142840}
   - component: {fileID: 2037935923289130015}
   - component: {fileID: 2037935923289130008}
-  - component: {fileID: -4751665706578137814}
-  - component: {fileID: 6871569384429301092}
   - component: {fileID: 1402264830572346267}
+  - component: {fileID: 3020001109028293457}
   m_Layer: 0
   m_Name: CactusPA
   m_TagString: Enemy
@@ -697,43 +696,6 @@ CapsuleCollider:
   m_Height: 1.1059921
   m_Direction: 1
   m_Center: {x: -0.02798587, y: 0.55825543, z: 0.05042073}
---- !u!114 &-4751665706578137814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8888542690951001737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47bc83103149c5f48a02ca9b6c22441d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: c9e13fa8536ec3746b59df2aaaaf21a5, type: 2}
-  walkCounter: 0
-  waitCounter: 0
-  isWalking: 0
-  playerCheck: {fileID: 5873036858718715351}
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 128
-  isRunning: 0
-  isAttackRange: 0
-  player: {fileID: 8656194435090311156, guid: bc8c325f251a77f4ab5ad29aed6ea815, type: 3}
---- !u!114 &6871569384429301092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8888542690951001737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fd2802fca0d558438d9604eba12078f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: c9e13fa8536ec3746b59df2aaaaf21a5, type: 2}
-  health: 1
 --- !u!65 &1402264830572346267
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -747,6 +709,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5697006, y: 1.5629297, z: 1.9792731}
   m_Center: {x: -0.020698607, y: 0.845041, z: 0.7568127}
+--- !u!114 &3020001109028293457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8888542690951001737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc13b1bc694bf2c4782ff8712036ab61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyData: {fileID: 11400000, guid: c9e13fa8536ec3746b59df2aaaaf21a5, type: 2}
+  walkCounter: 0
+  waitCounter: 0
+  isWalking: 0
+  playerCheck: {fileID: 5873036858718715351}
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  isRunning: 0
+  isAttackRange: 0
+  player: {fileID: 8656194435090311156, guid: bc8c325f251a77f4ab5ad29aed6ea815, type: 3}
+  health: 0
 --- !u!1 &9195342924026356037
 GameObject:
   m_ObjectHideFlags: 0

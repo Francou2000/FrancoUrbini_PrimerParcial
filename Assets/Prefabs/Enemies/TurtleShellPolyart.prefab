@@ -949,8 +949,7 @@ GameObject:
   - component: {fileID: 4597723160109431808}
   - component: {fileID: 4597723160109431809}
   - component: {fileID: 2342858411256637759}
-  - component: {fileID: -6653422552728005079}
-  - component: {fileID: -5914325539577079534}
+  - component: {fileID: 5531941284269821837}
   m_Layer: 0
   m_Name: TurtleShellPolyart
   m_TagString: Enemy
@@ -1039,7 +1038,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.915354, y: 1.6056528, z: 2.3961565}
   m_Center: {x: 0.028690696, y: 0.8478279, z: 0.6980783}
---- !u!114 &-6653422552728005079
+--- !u!114 &5531941284269821837
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1048,21 +1047,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7095368044123538485}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fd2802fca0d558438d9604eba12078f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: 4924131d9dd36b542909fedaace516ac, type: 2}
-  health: 0
---- !u!114 &-5914325539577079534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7095368044123538485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47bc83103149c5f48a02ca9b6c22441d, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c807eb252cadf1478e673eaa94a8599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 4924131d9dd36b542909fedaace516ac, type: 2}
@@ -1076,6 +1061,7 @@ MonoBehaviour:
   isRunning: 0
   isAttackRange: 0
   player: {fileID: 8656194435090311156, guid: bc8c325f251a77f4ab5ad29aed6ea815, type: 3}
+  health: 0
 --- !u!1 &7378951520154426636
 GameObject:
   m_ObjectHideFlags: 0

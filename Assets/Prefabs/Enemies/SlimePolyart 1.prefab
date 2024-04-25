@@ -265,11 +265,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5307651481388614884}
   - component: {fileID: 5630108233184890486}
-  - component: {fileID: 5630108233184890487}
   - component: {fileID: 7923271801087067862}
   - component: {fileID: -7899924369936431535}
-  - component: {fileID: -2361767680721786360}
   - component: {fileID: 2527465753307526168}
+  - component: {fileID: 775076741260748283}
   m_Layer: 0
   m_Name: SlimePolyart 1
   m_TagString: Enemy
@@ -316,29 +315,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5630108233184890487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4819766713477160542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47bc83103149c5f48a02ca9b6c22441d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: b9a4eba487f576147821f4aaeda03a01, type: 2}
-  walkCounter: 0
-  waitCounter: 0
-  isWalking: 0
-  playerCheck: {fileID: 3174786919051717764}
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 128
-  isRunning: 0
-  isAttackRange: 0
-  player: {fileID: 8656194435090311156, guid: bc8c325f251a77f4ab5ad29aed6ea815, type: 3}
 --- !u!135 &7923271801087067862
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -368,20 +344,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &-2361767680721786360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4819766713477160542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fd2802fca0d558438d9604eba12078f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: b9a4eba487f576147821f4aaeda03a01, type: 2}
-  health: 1
 --- !u!65 &2527465753307526168
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -395,6 +357,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6490157, y: 1.4140911, z: 2.1376781}
   m_Center: {x: -0.03451571, y: 0.7319499, z: 0.5688391}
+--- !u!114 &775076741260748283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4819766713477160542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 756ec08329ab8194da1baaa9c562d23d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyData: {fileID: 11400000, guid: b9a4eba487f576147821f4aaeda03a01, type: 2}
+  walkCounter: 0
+  waitCounter: 0
+  isWalking: 0
+  playerCheck: {fileID: 3174786919051717764}
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  isRunning: 0
+  isAttackRange: 0
+  player: {fileID: 8656194435090311156, guid: bc8c325f251a77f4ab5ad29aed6ea815, type: 3}
+  health: 0
 --- !u!1 &5112644000486557543
 GameObject:
   m_ObjectHideFlags: 0

@@ -527,9 +527,8 @@ GameObject:
   - component: {fileID: 1246912324737018646}
   - component: {fileID: 8505774680700118318}
   - component: {fileID: 8505774680700118319}
-  - component: {fileID: 6538437737527366279}
-  - component: {fileID: 3550339989644163859}
   - component: {fileID: 8185856174307773565}
+  - component: {fileID: 6916650597933852371}
   m_Layer: 0
   m_Name: MushroomAngryPA
   m_TagString: Enemy
@@ -606,43 +605,6 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0.48161674, z: 0}
---- !u!114 &6538437737527366279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5541134392703593430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47bc83103149c5f48a02ca9b6c22441d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: 6952078cb8cac5e478e9813840813b08, type: 2}
-  walkCounter: 0
-  waitCounter: 0
-  isWalking: 0
-  playerCheck: {fileID: 9129295518884438931}
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 128
-  isRunning: 0
-  isAttackRange: 0
-  player: {fileID: 8656194435090311156, guid: bc8c325f251a77f4ab5ad29aed6ea815, type: 3}
---- !u!114 &3550339989644163859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5541134392703593430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fd2802fca0d558438d9604eba12078f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: 6952078cb8cac5e478e9813840813b08, type: 2}
-  health: 1
 --- !u!65 &8185856174307773565
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -656,6 +618,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5134641, y: 1.3456892, z: 2.2238379}
   m_Center: {x: -0.015731633, y: 0.669203, z: 0.6119189}
+--- !u!114 &6916650597933852371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5541134392703593430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff29bc0dfefb1804d92b9f09df5187cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyData: {fileID: 11400000, guid: 6952078cb8cac5e478e9813840813b08, type: 2}
+  walkCounter: 0
+  waitCounter: 0
+  isWalking: 0
+  playerCheck: {fileID: 9129295518884438931}
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  isRunning: 0
+  isAttackRange: 0
+  player: {fileID: 8656194435090311156, guid: bc8c325f251a77f4ab5ad29aed6ea815, type: 3}
+  health: 0
 --- !u!1 &5956948407942041124
 GameObject:
   m_ObjectHideFlags: 0
