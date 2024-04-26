@@ -1,18 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-public class TurtleFactory : MonoBehaviour
+public class TurtleFactory : EnemyFactory
 {
-    // Start is called before the first frame update
-    void Start()
+    public override CommonEnemy CreateEnemy()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        return new TurtleEnemy();
     }
 }

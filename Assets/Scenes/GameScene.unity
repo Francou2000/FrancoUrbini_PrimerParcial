@@ -4236,7 +4236,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3217434060109732226, guid: e9480865bf56fc9409f8c9f741f296de, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3217434060109732226, guid: e9480865bf56fc9409f8c9f741f296de, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4277,6 +4277,10 @@ PrefabInstance:
     - target: {fileID: 3217434060109732226, guid: e9480865bf56fc9409f8c9f741f296de, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4885228615127802886, guid: e9480865bf56fc9409f8c9f741f296de, type: 3}
+      propertyPath: enemiesValue
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4885228615127802886, guid: e9480865bf56fc9409f8c9f741f296de, type: 3}
       propertyPath: enemyToSpawn
@@ -5418,7 +5422,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3217434060109732226, guid: e9480865bf56fc9409f8c9f741f296de, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3217434060109732226, guid: e9480865bf56fc9409f8c9f741f296de, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5459,6 +5463,10 @@ PrefabInstance:
     - target: {fileID: 3217434060109732226, guid: e9480865bf56fc9409f8c9f741f296de, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4885228615127802886, guid: e9480865bf56fc9409f8c9f741f296de, type: 3}
+      propertyPath: enemiesValue
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4885228615127802886, guid: e9480865bf56fc9409f8c9f741f296de, type: 3}
       propertyPath: enemyToSpawn
@@ -9193,6 +9201,10 @@ PrefabInstance:
     - target: {fileID: 3217434060109732226, guid: e9480865bf56fc9409f8c9f741f296de, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4885228615127802886, guid: e9480865bf56fc9409f8c9f741f296de, type: 3}
+      propertyPath: enemiesValue
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4885228615127802886, guid: e9480865bf56fc9409f8c9f741f296de, type: 3}
       propertyPath: enemyToSpawn

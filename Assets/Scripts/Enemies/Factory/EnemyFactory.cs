@@ -1,5 +1,5 @@
 
 public abstract class EnemyFactory 
 {
-    public abstract CommonEnemy CreateEnemy(string type);
+    public abstract CommonEnemy CreateEnemy();
 }
