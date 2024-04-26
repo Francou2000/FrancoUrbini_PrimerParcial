@@ -2,9 +2,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    private EnemyFactory enemyFactory;
-
-    public enemies enemiesValue;
+    [SerializeField] private EnemyFactory enemyFactory;
 
     private float timer = 25f;
     public float time;
@@ -12,24 +10,6 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         time = 0;
-
-        switch (enemiesValue)
-        { 
-            case enemies.slime:
-                enemyFactory = new SlimeFactory();
-                break;
-            case enemies.mushroom:
-                enemyFactory = new MushroomFactory();
-                break;
-            case enemies.turtle:
-                enemyFactory = new TurtleFactory();
-                break;
-            case enemies.cactus:
-                enemyFactory = new CactusFactory();
-                break;
-            default:
-                break;
-        }
     }
 
     void Update()
@@ -38,25 +18,14 @@ public class Spawner : MonoBehaviour
 
         if (time > timer)
         {
-            InstantiateEnemy();
+            SpawnEnemy();
             time = 0;
         }
     }
 
-    void InstantiateEnemy()
+    public void SpawnEnemy()
     {
-        if (enemyFactory != null)
-        {
-            CommonEnemy enemy = enemyFactory.CreateEnemy();
-            Instantiate(enemy.gameObject, transform.position, Quaternion.identity);
-        }
+        CommonEnemy enemy = enemyFactory.CreateEnemy();
+        Instantiate(enemy.gameObject, transform.position, Quaternion.identity);
     }
-}
-
-public enum enemies
-{
-    slime,
-    cactus,
-    turtle,
-    mushroom
 }
