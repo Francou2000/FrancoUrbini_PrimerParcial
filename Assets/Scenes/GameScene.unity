@@ -4283,6 +4283,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4885228615127802886, guid: e9480865bf56fc9409f8c9f741f296de, type: 3}
+      propertyPath: enemyFactory
+      value: 
+      objectReference: {fileID: 11400000, guid: 49d7354bcbaaaa4459a09445fbb051ea, type: 2}
+    - target: {fileID: 4885228615127802886, guid: e9480865bf56fc9409f8c9f741f296de, type: 3}
       propertyPath: enemyToSpawn
       value: 
       objectReference: {fileID: 8888542690951001737, guid: 58c04fefcf3d7db4cbbb3490b9cfe6ab, type: 3}
@@ -5469,6 +5473,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4885228615127802886, guid: e9480865bf56fc9409f8c9f741f296de, type: 3}
+      propertyPath: enemyFactory
+      value: 
+      objectReference: {fileID: 11400000, guid: f48f6183be52c9c4d8160cf9fc848382, type: 2}
+    - target: {fileID: 4885228615127802886, guid: e9480865bf56fc9409f8c9f741f296de, type: 3}
       propertyPath: enemyToSpawn
       value: 
       objectReference: {fileID: 5541134392703593430, guid: b277bef96c215e74e960f3a491cfdfcc, type: 3}
@@ -6224,6 +6232,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4885228615127802886, guid: e9480865bf56fc9409f8c9f741f296de, type: 3}
+      propertyPath: enemyFactory
+      value: 
+      objectReference: {fileID: 11400000, guid: e7b60efac2e64cf42ac3b51920796026, type: 2}
     - target: {fileID: 4885228615127802886, guid: e9480865bf56fc9409f8c9f741f296de, type: 3}
       propertyPath: enemyToSpawn
       value: 
@@ -9206,6 +9218,10 @@ PrefabInstance:
       propertyPath: enemiesValue
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4885228615127802886, guid: e9480865bf56fc9409f8c9f741f296de, type: 3}
+      propertyPath: enemyFactory
+      value: 
+      objectReference: {fileID: 11400000, guid: da78e278d61f6c64f9c415489b360d50, type: 2}
     - target: {fileID: 4885228615127802886, guid: e9480865bf56fc9409f8c9f741f296de, type: 3}
       propertyPath: enemyToSpawn
       value: 

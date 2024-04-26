@@ -4,12 +4,16 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField] private EnemyFactory enemyFactory;
 
+    private EventQueue eventQueue;
+
     private float timer = 25f;
     public float time;
 
     void Start()
     {
         time = 0;
+
+        eventQueue = new EventQueue();
     }
 
     void Update()
@@ -18,8 +22,8 @@ public class Spawner : MonoBehaviour
 
         if (time > timer)
         {
-            SpawnEnemy();
-            time = 0;
+            ICommand command = new SpawnCommand(this);
+            eventQueue.QueueCommand(command);
         }
     }
 
@@ -27,5 +31,6 @@ public class Spawner : MonoBehaviour
     {
         CommonEnemy enemy = enemyFactory.CreateEnemy();
         Instantiate(enemy.gameObject, transform.position, Quaternion.identity);
+        time = 0;
     }
 }
