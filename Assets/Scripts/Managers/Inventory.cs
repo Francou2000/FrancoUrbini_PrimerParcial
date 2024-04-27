@@ -1,21 +1,16 @@
 using UnityEngine;
-using TMPro;
 
 public class Inventory : MonoBehaviour
 {
-    public TextMeshProUGUI pCounter;
-    public TextMeshProUGUI scCounter;
-    public TextMeshProUGUI ccCounter;
-    public TextMeshProUGUI tcCounter;
-    public TextMeshProUGUI mcCounter;
-    public static Inventory Instance { get; private set; }
-
+    //slime = 0, cactus = 1, turtle = 2, mushroom = 3 
+    public int[] coreItems = new int[4];
     public int potions = 0;
 
-    //slime = 0, cactus = 1, turtle = 2, mushroom = 3 
-    public int[] coreItems = new int [4];
+    IInventoryCanvas inventoryCanvas;
 
-    private void Awake()
+    public static Inventory Instance { get; private set; }
+
+    public void Awake()
     {
         if (Instance != null && Instance != this)
         {
@@ -27,12 +22,17 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    private void Update()
+    public void Start()
     {
-        pCounter.text = potions.ToString();
-        scCounter.text = coreItems[0].ToString();
-        ccCounter.text = coreItems[1].ToString();
-        mcCounter.text = coreItems[3].ToString();
-        tcCounter.text = coreItems[2].ToString();
+        inventoryCanvas = CanvasController.Instance;
+    }
+
+    public void Update()
+    {
+        inventoryCanvas.Inventory.potions = potions;
+        inventoryCanvas.Inventory.coreItems[0] = coreItems[0];
+        inventoryCanvas.Inventory.coreItems[1] = coreItems[1];
+        inventoryCanvas.Inventory.coreItems[2] = coreItems[2];
+        inventoryCanvas.Inventory.coreItems[3] = coreItems[3];
     }
 }

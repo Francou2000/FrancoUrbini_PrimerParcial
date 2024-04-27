@@ -9,19 +9,18 @@ public class HealthBar : MonoBehaviour
 
     public GameObject playerState;
 
-    private float currentHealth;
-    private float maxHealth;
+    public float currentHealth;
+    private float maxHealth = 100;
 
     void Start()
     {
         slider = GetComponent<Slider>();
+
+        currentHealth = maxHealth;
     }
 
     void Update()
     {
-        currentHealth = playerState.GetComponent<PlayerState>().currentHealth;
-        maxHealth = playerState.GetComponent<PlayerState>().maxHealth;
-
         float fillValue = currentHealth / maxHealth;
         slider.value = fillValue;
 

@@ -4,9 +4,18 @@ public class Potion : MonoBehaviour
 {
     public float healthRecovered = 25;
 
+    IHealthCanvas healthCanvas;
+    IInventoryCanvas inventoryCanvas;
+
+    private void Start()
+    {
+        healthCanvas = CanvasController.Instance;
+        inventoryCanvas = CanvasController.Instance;
+    }
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && Inventory.Instance.potions >= 1)
+        if (Input.GetKeyDown(KeyCode.Q) && inventoryCanvas.Inventory.potions >= 1)
         {
             UsePotion();
         }
@@ -14,12 +23,12 @@ public class Potion : MonoBehaviour
 
     void UsePotion()
     {
-        Inventory.Instance.potions -= 1;
-        PlayerState.Instance.currentHealth += healthRecovered;
+        inventoryCanvas.Inventory.potions -= 1;
+        healthCanvas.HealthBar.currentHealth += healthRecovered;
 
-        if (PlayerState.Instance.currentHealth >= 100) 
+        if (healthCanvas.HealthBar.currentHealth >= 100) 
         {
-            PlayerState.Instance.currentHealth = 100;
+            healthCanvas.HealthBar.currentHealth = 100;
         }
     }
 }

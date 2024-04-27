@@ -5,6 +5,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject winPanelToActivate;
     [SerializeField] private GameObject losePanelToActivate;
 
+    IHealthCanvas healthCanvas;
+
     public static GameManager Instance { get; private set; }
 
     private void Awake()
@@ -19,9 +21,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void Start()
+    {
+        healthCanvas = CanvasController.Instance;
+    }
+
     void Update()
     {
-        if(PlayerState.Instance.currentHealth <= 0)
+        if(healthCanvas.HealthBar.currentHealth <= 0)
         {
             Lose();
         }

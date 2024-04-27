@@ -7,6 +7,13 @@ public class LoseHealth : MonoBehaviour
 
     [SerializeField] private float invincibleFrames= 2.5f;
 
+    IHealthCanvas healthCanvas;
+
+    public void Start()
+    {
+        healthCanvas = CanvasController.Instance;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Boss"))
@@ -17,7 +24,7 @@ public class LoseHealth : MonoBehaviour
 
     private IEnumerator LoseHealthRoutine()
     {
-        PlayerState.Instance.currentHealth -= damageReceived;
+        healthCanvas.HealthBar.currentHealth -= damageReceived;
 
         gameObject.GetComponent<CapsuleCollider>().enabled = false;
 
