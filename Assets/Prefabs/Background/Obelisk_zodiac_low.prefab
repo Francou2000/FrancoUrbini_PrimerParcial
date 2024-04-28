@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInRange: 0
-  ItemName: Insert 3 Turtle Cores
+  ItemName: Press E To Insert 3 Turtle Cores
   coreItems: 0
 --- !u!65 &1387447162918170842
 BoxCollider:
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInRange: 0
-  ItemName: Insert 3 Slime Cores
+  ItemName: Press E To Insert 3 Slime Cores
   coreItems: 0
 --- !u!65 &7976234072967788174
 BoxCollider:
@@ -430,7 +430,7 @@ MonoBehaviour:
   - {fileID: 598610220926222222}
   - {fileID: 1812890864039713951}
   bossSpawnPoints: {fileID: 7247065275507393276}
-  boss: {fileID: 2492735360746369875, guid: 4f46aa4da234c1644910fdef54fb7141, type: 3}
+  enemyType: {fileID: 0}
 --- !u!1 &2987981672123855570
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,7 +700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInRange: 0
-  ItemName: Insert 3 Cactus Cores
+  ItemName: Press E To Insert 3 Cactus Cores
   coreItems: 0
 --- !u!114 &5287332691667551827
 MonoBehaviour:
@@ -829,7 +829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInRange: 0
-  ItemName: Insert 3 Mushroom Cores
+  ItemName: Press E To Insert 3 Mushroom Cores
   coreItems: 0
 --- !u!65 &8961392946280077581
 BoxCollider:

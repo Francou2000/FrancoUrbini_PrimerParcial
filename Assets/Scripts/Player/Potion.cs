@@ -23,7 +23,7 @@ public class Potion : MonoBehaviour
 
     void UsePotion()
     {
-        inventoryCanvas.Inventory.potions -= 1;
+        Inventory.Instance.potions -= 1;
         healthCanvas.HealthBar.currentHealth += healthRecovered;
 
         if (healthCanvas.HealthBar.currentHealth >= 100) 
