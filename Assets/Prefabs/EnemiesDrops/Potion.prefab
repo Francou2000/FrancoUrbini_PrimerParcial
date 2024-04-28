@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInRange: 0
-  ItemName: Potion
+  ItemName: Press E to Pickup Potion and Press Q to Use It
   coreItems: 4
 --- !u!65 &3760635893096732954
 BoxCollider:

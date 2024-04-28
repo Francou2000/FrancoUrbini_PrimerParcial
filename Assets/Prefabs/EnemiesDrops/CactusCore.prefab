@@ -687,7 +687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInRange: 0
-  ItemName: Cactus Core
+  ItemName: Press E to Pickup Cactus Core
   coreItems: 1
 --- !u!135 &1268474648930887278
 SphereCollider:

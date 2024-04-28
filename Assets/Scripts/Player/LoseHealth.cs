@@ -6,20 +6,24 @@ public class LoseHealth : MonoBehaviour
     public float damageReceived = 10;
 
     [SerializeField] private float invincibleFrames= 2.5f;
+    [SerializeField] private GameObject player;
 
     IHealthCanvas healthCanvas;
 
     public void Start()
     {
         healthCanvas = CanvasController.Instance;
+
+        var playerController = player.GetComponent<PlayerController>();
+        if (playerController != null)
+        {
+            playerController.onPlayerHit += GetHit;
+        }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void GetHit()
     {
-        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Boss"))
-        {
-            StartCoroutine(LoseHealthRoutine());
-        }
+        StartCoroutine(LoseHealthRoutine());
     }
 
     private IEnumerator LoseHealthRoutine()

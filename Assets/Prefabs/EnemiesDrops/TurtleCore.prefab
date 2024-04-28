@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInRange: 0
-  ItemName: Turtle Core
+  ItemName: Press E to Pickup Turtle Core
   coreItems: 2
 --- !u!135 &-2817120128417972180
 SphereCollider:

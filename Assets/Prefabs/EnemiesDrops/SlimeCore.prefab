@@ -770,7 +770,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInRange: 0
-  ItemName: Slime Core
+  ItemName: Press E to Pickup Slime Core
+  coreItems: 0
 --- !u!135 &6166843261471034167
 SphereCollider:
   m_ObjectHideFlags: 0
